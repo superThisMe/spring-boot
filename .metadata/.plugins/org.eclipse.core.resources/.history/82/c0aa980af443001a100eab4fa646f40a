@@ -1,0 +1,12 @@
+package com.springdemo.bootboard.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.springdemo.bootboard.vo.Board;
+
+@Mapper
+public interface BoardMapper {
+
+	void insertBoard(Board board);
+	
+}

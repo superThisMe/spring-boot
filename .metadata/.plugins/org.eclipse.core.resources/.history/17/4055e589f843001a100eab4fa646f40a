@@ -1,0 +1,38 @@
+package com.springdemo.bootboard.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.springdemo.bootboard.service.BoardService;
+
+@Controller
+@RequestMapping(path = { "/board" })
+public class BoardController {
+	
+	@Autowired
+	BoardService boardService;
+	
+	@GetMapping(path = { "/list" })
+	public String showList() {
+		
+		return "board/list";
+		
+	}
+	
+	@GetMapping(path = { "/write" })
+	public String showWriteForm() {
+		
+		return "board/write";
+		
+	}
+	
+	@PostMapping(path = { "/write" })
+	public String writeBoard() {
+		
+		return "board/list";
+	}
+
+}

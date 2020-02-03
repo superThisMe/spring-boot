@@ -1,0 +1,5 @@
+package com.springdemo.bootboard.controller;
+
+public class BoardController {
+
+}

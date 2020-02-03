@@ -1,0 +1,17 @@
+package com.springdemo.bootboard.service;
+
+import org.springframework.stereotype.Service;
+
+import com.springdemo.bootboard.vo.Board;
+
+@Service("boardService")	// == @Component
+public class BoardServiceImpl implements BoardService {
+
+	@Override
+	public void writeBoard(Board board) {
+		
+//		boardMapper.insertBoard(board);
+		
+	}
+
+}

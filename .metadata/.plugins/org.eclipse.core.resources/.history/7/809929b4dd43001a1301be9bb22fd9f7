@@ -1,0 +1,5 @@
+package com.springdemo.bootboard.vo;
+
+public class Board {
+
+}
