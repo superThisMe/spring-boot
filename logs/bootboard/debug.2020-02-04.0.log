@@ -1,0 +1,47 @@
+2020-02-04 11:59:21,813  INFO [com.springdemo.bootboard.SpringBoardAApplication] Starting SpringBoardAApplication on goott6-PC with PID 2628 (C:\workspace\spring-boot\spring-board-a\bin\main started by goott6 in C:\workspace\spring-boot\spring-board-a)
+2020-02-04 11:59:21,815 DEBUG [com.springdemo.bootboard.SpringBoardAApplication] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-04 11:59:21,815  INFO [com.springdemo.bootboard.SpringBoardAApplication] No active profile set, falling back to default profiles: default
+2020-02-04 11:59:23,764  INFO [com.springdemo.bootboard.SpringBoardAApplication] Started SpringBoardAApplication in 2.34 seconds (JVM running for 2.931)
+2020-02-04 11:59:27,109 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:27,110  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:27,110  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:27,111 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:33,781 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:33,781  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:33,782  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:33,782 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:34,540 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:34,540  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:34,540  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:34,540 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:45,337 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:45,337  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:45,352  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:45,353 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:45,759 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:45,759  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:45,759  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:45,759 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:45,961 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:45,962  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:45,962  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:45,962 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:46,144 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:46,145  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:46,145  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:46,145 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:46,322 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:46,322  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:46,322  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:46,322 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:46,505 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:46,505  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:46,505  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:46,505 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:46,678 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:46,678  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:46,678  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home
+2020-02-04 11:59:46,678 ERROR [com.springdemo.bootboard.controller.HomeController] Error Level Log From Home
+2020-02-04 11:59:46,849 DEBUG [com.springdemo.bootboard.controller.HomeController] Debug Level Log From Home
+2020-02-04 11:59:46,849  INFO [com.springdemo.bootboard.controller.HomeController] Info Level Log From Home
+2020-02-04 11:59:46,849  WARN [com.springdemo.bootboard.controller.HomeController] Warn Level Log From Home

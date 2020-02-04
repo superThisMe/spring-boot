@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+	<property name="LOG_HOME" value="C:/workspace/spring-boot/logs/bootboard" />
+
+	<!-- Appenders -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %5p [%c] %m%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %5p %m%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/debug.log</file>
+		<encoder>
+			<pattern>%d %5p [%c] %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/debug.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5KB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+<!-- 	<logger name="com.springdemo.bootboard" level="DEBUG">
+		<appender-ref ref="console" />
+	</logger> -->
+
+	<!-- Root Logger -->
+	<root level="off">
+		<appender-ref ref="console" />
+	</root>
+	
+</configuration>

@@ -1,0 +1,27 @@
+package com.springdemo.bootboard.aop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect	// == Advice + Pointcut
+public class LogAspect {
+	
+	@Pointcut("within(com.springdemo.bootboard.controller.*)")
+	public void logPointcut() {}
+	
+	@Before("logPointcut()")
+	public void doBefore(JoinPoint joinPoint) {
+		System.out.println(String.format("Before %s.%s", joinPoint.getTarget().getClass(), joinPoint.getSignature().getName()));
+	}
+	
+	@After("logPointcut()")
+	public void doAfter() {
+		System.out.println("After ....");
+	}
+	
+}

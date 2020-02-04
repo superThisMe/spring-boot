@@ -1,0 +1,20 @@
+package com.springdemo.bootboard.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect	// == Advice + Pointcut
+public class LogAspect {
+	
+	@Pointcut("within(com.springdemo.bootboard.controller)")
+	public void logPointcut() {}
+	
+	@Before("logPointcut()")
+	public void doBefore() {
+		System.out.println("Before ....");
+	}
+	
+}

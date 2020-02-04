@@ -1,0 +1,10 @@
+package com.springdemo.bootboard.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect	// == Advice + Pointcut
+public class LogAspect {
+	
+}

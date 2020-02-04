@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="spring-board-a"/>
+<aop-project name="spring-board-c"/>
+<aop-project name="08.spring-board-b"/>
 <aop-project name="hello-boot"/>
 </aop-reference-model>
