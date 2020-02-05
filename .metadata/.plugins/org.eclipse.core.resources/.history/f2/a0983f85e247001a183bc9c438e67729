@@ -1,0 +1,128 @@
+package com.springboard.service;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.TransactionCallback;
+import org.springframework.transaction.support.TransactionTemplate;
+
+import com.springboard.mapper.BoardMapper;
+import com.springboard.repository.BoardDao;
+import com.springboard.vo.BoardVO;
+
+import lombok.Setter;
+
+public class BoardServiceImpl implements BoardService {
+	
+	// setter 메서드 이용한 의존성 주입 (root-context.xml -> property)
+	@Setter // lombok 이 setter 메서드 만드는 어노테이션
+	private BoardDao boardDao;
+	
+	@Setter
+	private BoardMapper boardMapper;
+	
+	@Setter
+	private TransactionTemplate txTemplate;
+	
+	@Override
+	public int writeBoard(BoardVO board) {		
+		
+		Boolean tf = txTemplate.execute(new TransactionCallback<Boolean>() {
+
+			@Override
+			public Boolean doInTransaction(TransactionStatus status) {
+				
+				try {
+					boardMapper.insertBoard(board);
+					double n = Math.random();
+					System.out.println(n);
+					if (n < 0.5) {
+						throw new Exception();
+					}
+					System.out.println("Success.... Commit!!");
+					return true;
+				} catch (Exception e) {
+					System.out.println("Failed.... Rollback!!");
+					status.setRollbackOnly();
+					return false;
+				}
+			}
+			
+		});
+		
+		// Transaction commit, rollback 여부를 구분해서 return
+		if (tf) {
+			return board.getBno();
+		} else {
+			return -1;
+		}	
+		
+	}
+
+	@Override
+	public List<BoardVO> findBoard() {
+
+		//return boardDao.selectBoard();
+		return boardMapper.selectBoard();
+		
+	}
+	
+	@Override
+	public List<BoardVO> findBoardWithPaging(HashMap<String, Object> params) {
+		
+		return boardMapper.selectBoardWithPaging(params);
+		
+	}
+
+
+	@Override
+	public BoardVO findBoardByBno(int bno) {
+		
+		return boardMapper.selectBoardByBno(bno);
+		
+	}
+
+	@Override
+	public void deleteBoard(int bno) {
+
+		boardMapper.deleteBoard(bno);
+		
+	}
+
+	@Override
+	public void updateBoard(BoardVO board) {
+		
+		boardMapper.updateBoard(board);
+		
+	}
+
+	@Override
+	public void increaseReadCount(int bno) {
+		
+		boardMapper.updateReadCount(bno);
+		
+	}
+
+	@Override
+	public int findBoardCount(HashMap<String, Object> params) {
+
+		return boardMapper.selectBoardCount(params);
+
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

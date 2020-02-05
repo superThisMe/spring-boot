@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springdemo.bootboard.mapper.BoardMapper;
 import com.springdemo.bootboard.vo.Board;
@@ -15,11 +16,11 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	BoardMapper boardMapper;
 
+	@Transactional(rollbackFor = {Exception.class})
 	@Override
-	public void writeBoard(Board board) {
-		
+	public void writeBoard(Board board) throws Exception {		
 		boardMapper.insertBoard(board);
-		
+		throw new Exception();
 	}
 
 	@Override

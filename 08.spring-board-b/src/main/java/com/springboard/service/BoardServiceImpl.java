@@ -3,6 +3,11 @@ package com.springboard.service;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import org.springframework.transaction.support.TransactionCallback;
+import org.springframework.transaction.support.TransactionTemplate;
+
 import com.springboard.mapper.BoardMapper;
 import com.springboard.repository.BoardDao;
 import com.springboard.vo.BoardVO;
@@ -18,14 +23,41 @@ public class BoardServiceImpl implements BoardService {
 	@Setter
 	private BoardMapper boardMapper;
 	
+	@Setter
+	private TransactionTemplate txTemplate;
+	
 	@Override
-	public int writeBoard(BoardVO board) {
+	public int writeBoard(BoardVO board) {		
 		
-		// int newBno = boardDao.insertBoard(board);
-		// return newBno;
+		Boolean tf = txTemplate.execute(new TransactionCallback<Boolean>() {
+
+			@Override
+			public Boolean doInTransaction(TransactionStatus status) {
+				
+				try {
+					boardMapper.insertBoard(board);
+					double n = Math.random();
+					System.out.println(n);
+					if (n < 0.5) {
+						throw new Exception();
+					}
+					System.out.println("Success.... Commit!!");
+					return true;
+				} catch (Exception e) {
+					System.out.println("Failed.... Rollback!!");
+					status.setRollbackOnly();
+					return false;
+				}
+			}
+			
+		});
 		
-		boardMapper.insertBoard(board);
-		return board.getBno();
+		// Transaction의 commit, rollback 여부를 구분해서 return
+		if (tf) {
+			return board.getBno();
+		} else {
+			return -1;
+		}	
 		
 	}
 
@@ -54,9 +86,18 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public void deleteBoard(int bno) {
-
-		boardMapper.deleteBoard(bno);
 		
+			try {
+				boardMapper.deleteBoard(bno);
+				double n = Math.random();
+				System.out.println(n);
+				if (n < 0.5) {
+					throw new Exception();
+				} 
+			} catch (Exception e) {
+				System.out.println("Failed to Delete!!");
+				TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+			} 
 	}
 
 	@Override

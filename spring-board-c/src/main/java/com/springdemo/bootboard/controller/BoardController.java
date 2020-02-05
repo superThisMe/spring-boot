@@ -42,10 +42,14 @@ public class BoardController {
 	@PostMapping(path = { "/write" })
 	public String writeBoard(Board board) {
 		
-		boardService.writeBoard(board);
-		System.out.println(board.getBoardIdx()); //자동증가값 확인 코드
+		try {
+			boardService.writeBoard(board);
+			System.out.println(board.getBoardIdx()); // 자동 증가 값 확인 코드
+		} catch (Exception ex) {
+			System.out.println("등록 실패");
+		}
 		
-		return "redirect:list";
+		return "redirect:list";		
 	}
 	
 	@GetMapping(path = { "/detail" })

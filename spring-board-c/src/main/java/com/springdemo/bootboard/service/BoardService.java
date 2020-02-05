@@ -6,7 +6,7 @@ import com.springdemo.bootboard.vo.Board;
 
 public interface BoardService {
 
-	void writeBoard(Board board);
+	void writeBoard(Board board) throws Exception;
 
 	List<Board> findBoardList();
 

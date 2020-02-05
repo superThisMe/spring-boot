@@ -1,0 +1,81 @@
+package com.springdemo.bootboard.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.springdemo.bootboard.service.BoardService;
+import com.springdemo.bootboard.vo.Board;
+
+@Controller
+@RequestMapping(path = { "/board" })
+public class BoardController {
+	
+	@Autowired
+	@Qualifier("boardService")
+	BoardService boardService;
+	
+	@GetMapping(path = { "/list" })
+	public String showList(Model model) {
+		
+		List<Board> boards = boardService.findBoardList();
+		model.addAttribute("boards", boards);
+		
+		return "board/list";
+		
+	}
+	
+	@GetMapping(path = { "/write" })
+	public String showWriteForm() {
+		
+		return "board/write";
+		
+	}
+	
+	@PostMapping(path = { "/write" })
+	public String writeBoard(Board board) {
+		
+		boardService.writeBoard(board);
+		System.out.println(board.getBoardIdx()); //자동증가값 확인 코드
+		
+		return "redirect:list";
+	}
+	
+	@GetMapping(path = { "/detail" })
+	public String showDetail(@RequestParam("board_idx")int boardIdx, Model model) {
+		
+		Board board = boardService.findBoardByBoardIdx(boardIdx);
+		
+		if (board == null) {
+			return "redirect:list";
+		}
+		
+		model.addAttribute("board", board);
+		
+		return "board/detail";
+	}
+	
+	@PostMapping(path = { "/update" })
+	public String updateBoard(Board board) {
+		
+		boardService.updateBoardByBoardIdx(board);
+		
+		return "redirect:list";
+	}
+	
+	@PostMapping(path = { "/delete" })
+	public String deleteBoard(Board board) {
+		
+		boardService.deleteBoardByBoardIdx(board);
+		
+		return "redirect:list";		
+	}
+
+}

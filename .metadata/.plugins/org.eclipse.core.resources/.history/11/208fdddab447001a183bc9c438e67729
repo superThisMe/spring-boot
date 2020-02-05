@@ -1,0 +1,7 @@
+package com.springboard.aop;
+
+public class LoggingAdvice {
+
+	private Logger log
+	
+}
