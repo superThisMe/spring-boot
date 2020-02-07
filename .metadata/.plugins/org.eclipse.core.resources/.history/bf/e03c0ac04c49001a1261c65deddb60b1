@@ -1,0 +1,8 @@
+package com.springboard.vo;
+
+public class MemberRoleVO {
+
+	private String email;
+	private String roleName;
+	
+}

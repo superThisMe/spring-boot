@@ -1,0 +1,46 @@
+package com.springdemo.bootboard.aop;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect	// == Advice + Pointcut
+public class LogAspect {
+	
+	  @Pointcut("within(com.springdemo.bootboard.controller.*)") public void
+	  controllerPointcut() {}
+	  
+	  @Pointcut("within(com.springdemo.bootboard.service.*)") public void
+	  servicePointcut() {}
+	  
+	  @Pointcut("within(com.springdemo.bootboard..*)") public void logPointcut() {}
+	  
+//	  @Before("controllerPointcut()") public void doBefore(JoinPoint joinPoint) {
+//	  System.out.println(String.format("Before %s.%s",
+//	  joinPoint.getTarget().getClass(), joinPoint.getSignature().getName())); }
+//	  
+//	  @After("servicePointcut()") public void doAfter(JoinPoint joinPoint) {
+//	  System.out.println(String.format("After %s.%s",
+//	  joinPoint.getTarget().getClass(), joinPoint.getSignature().getName())); }
+	  
+	  @Around("logPointcut()") public Object writeLog(ProceedingJoinPoint pjp) throws Throwable {
+	  
+	  long start = System.currentTimeMillis();
+	  
+	  Object returnValue = null; 
+	  
+	  returnValue = pjp.proceed(); // 실제 Method 호출
+	  
+	  long stop = System.currentTimeMillis();
+	  
+	  System.out.printf("Execution Lap of %s.%s: %d\n", pjp.getTarget().getClass(),
+	  pjp.getSignature().getName(), (stop - start));
+	  
+	  return returnValue;
+	  
+	  }
+	
+}

@@ -1,0 +1,8 @@
+package com.springboard.security;
+
+import org.springframework.security.web.access.AccessDeniedHandler;
+
+// Spring Security의 Access Denied Event Handling
+public class SpringBoardAccessDeniedHandler implements AccessDeniedHandler {
+
+}

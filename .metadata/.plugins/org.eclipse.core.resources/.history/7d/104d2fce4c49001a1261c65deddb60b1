@@ -1,0 +1,15 @@
+package com.springboard.vo;
+
+import java.util.Date;
+
+import lombok.Data;
+
+@Data
+public class MemberVO {
+
+	private String email;
+	private String passwd;
+	private boolean enabled;
+	private Date redDate;
+	
+}

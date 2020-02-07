@@ -1,0 +1,21 @@
+package com.springboard.security;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.springboard.mapper.MemberMapper;
+
+public class CustomUserDetailsService implements UserDetailsService {
+
+	private MemberMapper memberMapper;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		
+		
+		
+		return null;
+	}	
+
+}

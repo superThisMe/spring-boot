@@ -1,0 +1,5 @@
+package com.springboard.security;
+
+public class SpringBoardAccessDeniedHandler {
+
+}

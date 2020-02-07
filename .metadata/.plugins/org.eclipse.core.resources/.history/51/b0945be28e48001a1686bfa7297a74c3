@@ -1,0 +1,6 @@
+package com.springboard.security;
+
+// Spring Security의 Access Failed Event Handling
+public class SpringBoardAccessDeniedHandler {
+
+}

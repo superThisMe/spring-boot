@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=legacy-spring-board-d/C:\/Users\/goott6\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/5.2.1.RELEASE\/spring-security-core-5.2.1.RELEASE.jar&lt;org.springframework.security.crypto.password(PasswordEncoder.class[PasswordEncoder" modifiers="1537" timestamp="1580951331442"/>
+<typeInfo handle="=legacy-spring-board-d/C:\/Program Files\/Java\/jdk1.8.0_231\/jre\/lib\/rt.jar&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1571898121745"/>
+<typeInfo handle="=legacy-spring-board-d/C:\/Users\/goott6\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/5.2.1.RELEASE\/spring-security-core-5.2.1.RELEASE.jar&lt;org.springframework.security.core.userdetails(UserDetailsService.class[UserDetailsService" modifiers="1537" timestamp="1580951331442"/>
+<typeInfo handle="=legacy-spring-board-d/C:\/Users\/goott6\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/5.2.1.RELEASE\/spring-security-core-5.2.1.RELEASE.jar&lt;org.springframework.security.core.userdetails(UserDetails.class[UserDetails" modifiers="1537" timestamp="1580951331442"/>
+</typeInfoHistroy>

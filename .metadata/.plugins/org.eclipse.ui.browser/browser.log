@@ -2,3 +2,8 @@
 2월 05, 2020 11:10:06.22 NEW SESSION
 2월 05, 2020 11:10:06.22 [4056:5296:0205/111006.223:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for Safety Tips (C:\Users\goott6\AppData\Local\Google\Chrome\User Data\SafetyTips\68).: 지정된 파일을 찾을 수 없습니다. (0x2)
 2월 05, 2020 15:18:54.29 [5816:4212:0205/151854.297:ERROR:socket_stream.cc(218)] Closing stream with result -2
+
+2월 06, 2020 11:30:19.52 NEW SESSION
+2월 06, 2020 11:30:19.52 [5792:4496:0206/113019.525:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for Safety Tips (C:\Users\goott6\AppData\Local\Google\Chrome\User Data\SafetyTips\69).: 지정된 파일을 찾을 수 없습니다. (0x2)
+2월 06, 2020 14:28:59.33 [5060:5452:0206/142859.333:ERROR:socket_stream.cc(218)] Closing stream with result -2
+2월 06, 2020 17:03:03.14 [2352:4848:0206/170303.063:ERROR:CONSOLE(764)] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.google.com') does not match the recipient window's origin ('chrome-search://local-ntp').", source: chrome-search://most-visited/single.js (764)
