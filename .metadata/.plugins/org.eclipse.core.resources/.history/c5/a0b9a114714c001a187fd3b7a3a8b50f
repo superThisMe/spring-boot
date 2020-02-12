@@ -1,0 +1,10 @@
+package com.springdemo.bootboard.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class BoardEntity {
+	
+	
+	
+}

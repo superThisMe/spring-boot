@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Util.java&apos; to &apos;spring-board-e/src/main/java/com.springdemo.bootboard.commons&apos;&#x0D;&#x0A;- Original project: &apos;legacy-spring-board-d&apos;&#x0D;&#x0A;- Destination element: &apos;spring-board-e/src/main/java/com.springdemo.bootboard.commons&apos;&#x0D;&#x0A;- Original element: &apos;com.springboard.common.Util.java&apos;" description="Copy compilation unit" destination="=spring-board-e/src\/main\/java&lt;com.springdemo.bootboard.commons" element1="/src\/main\/java&lt;com.springboard.common{Util.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581305789170" units="1" version="1.0"/>
+</session>

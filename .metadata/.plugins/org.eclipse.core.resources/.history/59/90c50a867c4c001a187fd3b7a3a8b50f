@@ -1,0 +1,5 @@
+package com.springdemo.bootboard.repository;
+
+public class BoardRepository {
+
+}

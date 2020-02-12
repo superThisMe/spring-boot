@@ -1,0 +1,17 @@
+package com.springdemo.bootboard.vo;
+
+import java.util.Date;
+
+import lombok.Data;
+
+@Data
+public class BoardFile {
+	
+	private int fileIdx;
+	private int boardIdx;
+	private String userFileName;
+	private String savedFilePath;
+	private long fileSize;
+	private String creatorId;
+	private Date createdDatetime;
+}

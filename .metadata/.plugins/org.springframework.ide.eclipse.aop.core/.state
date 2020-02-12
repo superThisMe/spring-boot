@@ -4,6 +4,8 @@
 <aop-project name="spring-board-b"/>
 <aop-project name="spring-board-c"/>
 <aop-project name="spring-board-d"/>
+<aop-project name="spring-board-e"/>
+<aop-project name="spring-board-f"/>
 <aop-project name="hello-boot"/>
 <aop-project name="legacy-spring-board-b">
 <aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="95" aspect-name="txAdvice" aspect-start-line-number="95" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/legacy-spring-board-b/src/main/webapp/WEB-INF/spring/root-context.xml" pointcut-expression="execution(* com.springboard.*..*.*(..))" proxy-target-class="false">

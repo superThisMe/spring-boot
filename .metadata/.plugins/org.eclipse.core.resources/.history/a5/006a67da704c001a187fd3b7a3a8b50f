@@ -1,0 +1,6 @@
+package com.springdemo.bootboard.entity;
+
+public class BoardEntity {
+
+	
+}

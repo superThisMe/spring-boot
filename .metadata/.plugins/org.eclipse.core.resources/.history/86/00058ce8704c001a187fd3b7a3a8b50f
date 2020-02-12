@@ -1,0 +1,25 @@
+package com.springdemo.bootboard.mapper;
+
+import java.util.List;
+
+import com.springdemo.bootboard.vo.Board;
+import com.springdemo.bootboard.vo.BoardFile;
+
+
+public interface BoardMapper {
+	
+	void insertBoard(Board board);
+	
+	void insertBoardFileList(List<BoardFile> fileList);
+
+	List<Board> selectBoardList();
+
+	Board selectBoardByBoardIdx(int boardIdx);
+
+	void updateBoard(Board board);
+
+	void deleteBoard(Board board);
+
+	BoardFile selectBoardFileByFildIdx(int fileIdx);
+
+}

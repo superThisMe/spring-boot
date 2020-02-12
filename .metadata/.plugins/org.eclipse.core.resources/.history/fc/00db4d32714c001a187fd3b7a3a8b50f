@@ -1,0 +1,27 @@
+package com.springdemo.bootboard.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity	// Database의 Table과 연동된 객체
+@Table(name = "tbl_board") // 연동된 Table name
+@Data
+public class BoardEntity {
+	
+	private int boardIdx;
+	private String title;
+	private String contents;
+	private int hitCount;
+	private String creatorId;
+	private Date createdDatetime;
+	private String updaterId;
+	private Date updatedDatetime;
+	private String deletedYn;
+	
+//	private List<BoardFile> fileList;
+	
+}

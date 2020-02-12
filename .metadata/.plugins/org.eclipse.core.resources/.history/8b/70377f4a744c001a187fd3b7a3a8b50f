@@ -1,0 +1,26 @@
+package com.springdemo.bootboard.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "tbl_file")
+@Data
+public class BoardFileEntity {
+	
+	@Id
+	private int fileIdx;
+	@Column(unique = true)
+	private int boardIdx;
+	private String userFileName;
+	private String savedFileName;
+	private long fileSize;
+	private String creatorId;
+	private Date createdDatetime;
+}

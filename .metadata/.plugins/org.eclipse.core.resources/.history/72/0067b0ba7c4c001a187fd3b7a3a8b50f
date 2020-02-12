@@ -1,0 +1,9 @@
+package com.springdemo.bootboard.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.springdemo.bootboard.entity.BoardEntity;
+
+public interface BoardRepository extends CrudRepository<BoardEntity, Integer> {
+
+}
